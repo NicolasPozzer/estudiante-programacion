@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "5ebcef9f-67e9-4fb5-8426-2946bbf5355b",
+		"name": "4-EstuProgramación",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-Crear nuevo curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_curso\":1,\r\n    \"nombre\": \"Java para principiantes\",\r\n    \"modalidad\" : \"on demand\",\r\n    \"fecha_finaliz\" : \"05/02/2022\"\r\n\r\n}\r\n/*\r\notro cursos de prueba\r\n{\r\n    \"id_curso\":4,\r\n    \"nombre\": \"Intro a la programación\",\r\n    \"modalidad\" : \"on demand\",\r\n    \"fecha_finaliz\" : \"23/11/2015\"\r\n\r\n}\r\n*/",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cursos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-Crear un nuevo tema",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tema\" : 1,\r\n    \"nombre\" : \"Variables en Java\",\r\n    \"descripcion\" : \"Qué son y para qué se utilizan\",\r\n    \"curso\" : {\"id_curso\":1}\r\n\r\n}\r\n//otros temas si se quiere probar\r\n/*{\r\n    \"id_tema\" : 2,\r\n    \"nombre\" : \"Estructuras Condicionales\",\r\n    \"descripcion\" : \"Diferencia entre if y switch\",\r\n     \"curso\" : {\"id_curso\":1}\r\n\r\n}*/",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/temas/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3- obtener todos los cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-Obtener los temas de un determinado curso",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "5-Obtener todos los cursos que tengan como nombre la palabra \"Java\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cursos/java",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cursos",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6- Modificar los datos de un curso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_curso\":1,\r\n    \"nombre\": \"Java para principiantes\",\r\n    \"modalidad\" : \"mixta\",\r\n    \"fecha_finaliz\" : \"05/02/2022\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/curso/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curso",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7-Modificar los datos de un determinado tema",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_tema\" : 2,\r\n    \"nombre\" : \"Variables en Java\",\r\n    \"descripcion\" : \"Qué son y para qué se utilizan\",\r\n    \"curso\" : {\"id_curso\":1}\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tema/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tema",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

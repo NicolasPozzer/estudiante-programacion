@@ -26,15 +26,15 @@ public class CursoService implements ICursoService{
     }
 
     @Override
-    public void deleteCurso(Long id) {
+    public void deleteCurso(Long id_curso) {
 
-        cursoRepo.deleteById(id);
+        cursoRepo.deleteById(id_curso);
 
     }
 
     @Override
-    public Curso findCurso(Long id) {
-        return cursoRepo.findById(id).orElse(null);
+    public Curso findCurso(Long id_curso) {
+        return cursoRepo.findById(id_curso).orElse(null);
     }
 
     @Override

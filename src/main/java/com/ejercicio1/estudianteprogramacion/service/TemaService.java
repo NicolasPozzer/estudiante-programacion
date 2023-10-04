@@ -21,13 +21,13 @@ public class TemaService implements ITemaService{
         temaRepo.save(tema);    }
 
     @Override
-    public void deleteTema(Long id) {
-        temaRepo.deleteById(id);
+    public void deleteTema(Long id_curso) {
+        temaRepo.deleteById(id_curso);
     }
 
     @Override
-    public Tema findTema(Long id) {
-        return temaRepo.findById(id).orElse(null);
+    public Tema findTema(Long id_curso) {
+        return temaRepo.findById(id_curso).orElse(null);
     }
 
     @Override
